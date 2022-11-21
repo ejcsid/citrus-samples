@@ -1,0 +1,8 @@
+include:
+  # Für Branch Pipelines
+  - template: "Workflows/Branch-Pipelines.gitlab-ci.yml"
+
+  - project: "$INCLUDE_CICD_PROJECT"
+    ref: "main"
+    file:
+      - "App.gitlab-ci.yml"
